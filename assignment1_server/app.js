@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve static files from the "htmlfiles" directory
-app.use(express.static(path.join(__dirname, 'htmlfiles')));
+app.use(express.static(path.join(__dirname, 'docs')));
 
 // Define the route for the root URL to serve "index1.html"
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'htmlfiles', 'index1.html'));
+    res.sendFile(path.join(__dirname, 'docs', 'index.html'));
 });
 
 // Start the server
